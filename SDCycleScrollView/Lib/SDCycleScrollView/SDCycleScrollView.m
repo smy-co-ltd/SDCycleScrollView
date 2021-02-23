@@ -652,6 +652,10 @@ NSString * const ID = @"SDCycleScrollViewCell";
         UIPageControl *pageControl = (UIPageControl *)_pageControl;
         pageControl.currentPage = indexOnPageControl;
     }
+    //用于背景颜色切换
+    if ([self.delegate respondsToSelector:@selector(cycleScrollViewDidScroll:)]) {
+            [self.delegate cycleScrollViewDidScroll:self.mainView];
+        }
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView

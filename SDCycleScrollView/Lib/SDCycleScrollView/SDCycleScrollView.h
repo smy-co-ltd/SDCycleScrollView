@@ -59,7 +59,8 @@ typedef enum {
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didScrollToIndex:(NSInteger)index;
 
 
-
+/**图片滑动的回调 背景颜色切换*/
+-(void)cycleScrollViewDidScroll:(UIScrollView *)cycleScrollView;
 
 
 
